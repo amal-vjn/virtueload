@@ -1,0 +1,17 @@
+api:
+  endpoints:
+    - name: movies
+      url: http://localhost:8080/movies/all
+      client:
+        thread-pool-size: 100
+        total-requests: 10000
+        requests-per-second: 500
+        timeout: 5000  # timeout in milliseconds
+    - name: search
+      url: http://localhost:8080/movies/search?genre=Action
+      client:
+        thread-pool-size: 100
+        total-requests: 500
+        requests-per-second: 100
+        timeout: 12000  # timeout in milliseconds
+    # Add more API configurations here as needed
